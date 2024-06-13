@@ -1,0 +1,25 @@
+<!DOCTYPE html> <!-- Declare HTML5 document type -->
+<html lang="en"> <!-- Start of HTML document with English as the primary language -->
+<head>
+    <meta charset="UTF-8"> <!-- Set character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Set viewport for responsiveness -->
+    <title>Bulb Project</title> <!-- Set title of the webpage -->
+    <script>
+        function light(num){
+            var pic; // Declare variable to store image filename
+            if (num == 0) { // Check if the parameter is 0 (ON)
+                pic = "Bulb_ON.png"; // Set image filename to ON state
+            } else {
+                pic = "Bulb_OFF.png"; // Set image filename to OFF state
+            } 
+            document.getElementById('current').src = pic; // Change image source based on state
+        }
+    </script>
+</head>
+<body bgcolor="black"> <!-- Set background color of the body to black -->
+    <img id="current" src="Bulb_OFF.png" alt="BULB OFF"> <!-- Display initial image with ID 'current' -->
+    <br> <!-- Insert line break -->
+    <button onclick="light(0)">Bulb ON</button> <!-- Button to turn bulb ON -->
+    <button onclick="light(1)">Bulb OFF</button> <!-- Button to turn bulb OFF -->
+</body>
+</html>
